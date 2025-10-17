@@ -5,25 +5,28 @@
         ref = $bindable(null),
         children,
         variant = "primary",
-        size = "md",
+        size = "lg",
         ...props
     } = $props();
 
     const variants = {
-        primary: "bg-dark text-background hover:bg-dark/95",
-        secondary: "bg-gray-200 text-dark hover:bg-gray-300",
-        outline: "border border-dark text-dark bg-transparent hover:bg-dark/5",
+        primary:
+            "bg-action-primary text-content-inversed hover:bg-action-primary-hover active:bg-action-primary-press disabled:bg-action-primary-muted",
+        secondary:
+            "bg-action-secondary text-content-primary hover:bg-action-secondary-hover active:bg-action-secondary-press disabled:text-content-muted",
+        tertiary:
+            "bg-none text-content-primary hover:bg-action-secondary-hover active:bg-action-secondary-press disabled:text-content-muted",
+        destructive:
+            "bg-action-error text-content-inversed hover:opacity-80 disabled:opacity-30",
     };
 
     const sizes = {
-        sm: "h-8 px-3 text-sm",
-        md: "h-12 px-5 text-base",
-        lg: "h-14 px-6 text-lg",
+        lg: "h-12 px-3 py-3 text-base",
     };
 </script>
 
 <Button.Root
-    class={`rounded-input shadow-mini inline-flex items-center justify-center font-semibold active:scale-[0.98] active:transition-all duration-300 ${variants[variant as keyof typeof variants]} ${sizes[size as keyof typeof sizes]}`}
+    class={`cursor-pointer disabled:cursor-not-allowed rounded-xl inline-flex items-center justify-center gap-2 font-medium active:scale-[0.98] ${variants[variant as keyof typeof variants]} ${sizes[size as keyof typeof sizes]} transition-all duration-300`}
     {...props}
     bind:ref
 >

@@ -8,5 +8,5 @@
 </script>
 
 <div
-    class={`bg-stroke-light ${orientation as keyof typeof orientations}`}
+    class={`bg-stroke-light ${orientations[orientation as keyof typeof orientations]}`}
 ></div>

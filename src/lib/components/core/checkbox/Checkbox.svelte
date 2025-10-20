@@ -1,22 +1,23 @@
 <script lang="ts">
     import {
         Checkbox,
-        Label,
+        // Label,
         useId,
         type WithoutChildrenOrChild,
     } from "bits-ui";
-    import { Check, Minus } from "phosphor-svelte";
+    import Check from "phosphor-svelte/lib/Check";
+    import Minus from "phosphor-svelte/lib/Minus";
 
     let {
         id = useId(),
         checked = $bindable(false),
         ref = $bindable(null),
-        labelRef = $bindable(null),
-        labelText,
+        // labelRef = $bindable(null),
+        // labelText,
         ...restProps
     }: WithoutChildrenOrChild<Checkbox.RootProps> & {
-        labelText?: string;
-        labelRef?: HTMLLabelElement | null;
+        // labelText?: string;
+        // labelRef?: HTMLLabelElement | null;
     } = $props();
 </script>
 

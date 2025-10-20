@@ -2,5 +2,7 @@ export type SelectItem = {
     value: string,
     label: string,
     subLabel?: string,
-    disabled?: boolean
+    disabled?: boolean,
+    avatar?: string,
+    icon?: string
 }

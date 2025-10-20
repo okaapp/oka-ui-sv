@@ -3,6 +3,6 @@
     let { children, ...props } = $props();
 </script>
 
-<div id="oka-style-theme-container" class="default-light" {...props}>
+<div id="oka-style-container" {...props}>
     {@render children()}
 </div>

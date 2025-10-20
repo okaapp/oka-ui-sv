@@ -1,2 +1,2 @@
 // Reexport your entry components here
-export { default as Button } from './components/button/Button.svelte';
+export { default as Button } from './components/core/button/Button.svelte';

@@ -26,7 +26,7 @@
 </script>
 
 <Button.Root
-    class={`cursor-pointer disabled:cursor-not-allowed rounded-xl inline-flex items-center justify-center gap-2 font-medium active:scale-[0.98] ${variants[variant as keyof typeof variants]} ${sizes[size as keyof typeof sizes]} transition-all duration-300`}
+    class={`w-fit min-w-32 cursor-pointer disabled:cursor-not-allowed rounded-xl inline-flex items-center justify-center gap-2 font-medium active:scale-[0.98] ${variants[variant as keyof typeof variants]} ${sizes[size as keyof typeof sizes]} transition-all duration-300`}
     {...props}
     bind:ref
 >

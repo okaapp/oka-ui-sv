@@ -39,16 +39,17 @@
     --color-appta-900: #09253f;
     --color-appta-secondary: #4750FF;
 
-    --accent-primary: var(--color-appta-primary);
-    --accent-primary-content: var(--color-appta-700);
-    --accent-primary-surface: var(--color-appta-100);
-    --accent-secondary: var(--color-appta-secondary);
-    --accent-secondary-content: var(--color-indigo-900);
-    --accent-secondary-surface: var(--color-indigo-100);
+    /* neutral-light */
+    --accent-primary: var(--color-zinc-500);
+    --accent-primary-content: var(--color-zinc-800);
+    --accent-primary-surface: var(--color-zinc-100);
+    --accent-secondary: var(--color-appta-primary);
+    --accent-secondary-content: var(--color-appta-900);
+    --accent-secondary-surface: var(--color-appta-100);
     --action-error: var(--color-red-700);
     --action-primary: var(--color-zinc-800);
     --action-primary-hover: var(--color-zinc-700);
-    --action-primary-muted: var(--color-zinc-400);
+    --action-primary-muted: var(--color-zinc-300);
     --action-primary-press: var(--color-zinc-900);
     --action-secondary: var(--color-zinc-200);
     --action-secondary-hover: var(--color-zinc-100);
@@ -122,13 +123,13 @@
     --surface-warning: var(--color-amber-100);
 }
 
-body .default-dark {
-    --accent-primary: var(--color-appta-primary);
-    --accent-primary-content: var(--color-appta-200);
-    --accent-primary-surface: var(--color-appta-800);
-    --accent-secondary: var(--color-appta-secondary);
-    --accent-secondary-content: var(--color-indigo-200);
-    --accent-secondary-surface: var(--color-indigo-900);
+body.neutral-dark {
+    --accent-primary: var(--color-zinc-500);
+    --accent-primary-content: var(--color-zinc-200);
+    --accent-primary-surface: var(--color-zinc-800);
+    --accent-secondary: var(--color-appta-primary);
+    --accent-secondary-content: var(--color-appta-200);
+    --accent-secondary-surface: var(--color-appta-900);
     --action-error: var(--color-red-400);
     --action-primary: var(--color-zinc-50);
     --action-primary-hover: var(--color-white);
@@ -139,12 +140,12 @@ body .default-dark {
     --action-secondary-press: var(--color-zinc-900);
     --content-error: var(--color-red-200);
     --content-inversed: var(--color-zinc-950);
-    --content-muted: var(--color-zinc-500);
+    --content-muted: var(--color-zinc-700);
     --content-primary: var(--color-zinc-50);
-    --content-secondary: var(--color-zinc-100);
+    --content-secondary: var(--color-zinc-400);
     --content-severe: var(--color-orange-200);
     --content-success: var(--color-green-200);
-    --content-tertiary: var(--color-zinc-200);
+    --content-tertiary: var(--color-zinc-500);
     --content-warning: var(--color-amber-200);
     --palette-blue-content: var(--color-blue-200);
     --palette-blue-highlight: var(--color-blue-500);
@@ -504,7 +505,7 @@ html {
 }
 
 body {
-    @apply text-content-primary;
+    @apply text-content-primary bg-surface-secondary;
     font-feature-settings: "rlig" 1, "calt" 1;
 }
 
@@ -516,6 +517,10 @@ body {
 /* Font */
 html {
     font-family: "Inter", system-ui, sans-serif;
+}
+
+.display-font {
+    font-family: "DM Serif Display";
 }
 
 /* Table */

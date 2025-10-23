@@ -13,9 +13,9 @@
         primary:
             "bg-action-primary text-content-inversed hover:bg-action-primary-hover active:bg-action-primary-press disabled:bg-action-primary-muted",
         secondary:
-            "bg-action-secondary text-content-primary hover:bg-action-secondary-hover active:bg-action-secondary-press disabled:text-content-muted",
+            "bg-action-secondary text-accent-primary-content hover:bg-action-secondary-hover active:bg-action-secondary-press disabled:text-content-muted",
         tertiary:
-            "bg-none text-content-primary hover:bg-action-secondary-hover active:bg-action-secondary-press disabled:text-content-muted",
+            "bg-none text-accent-primary-content hover:bg-action-secondary-hover active:bg-action-secondary-press disabled:text-content-muted",
         destructive:
             "bg-action-error text-content-inversed hover:opacity-80 disabled:opacity-30",
     };

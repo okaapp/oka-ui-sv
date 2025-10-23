@@ -26,7 +26,7 @@
     bind:checked
     bind:ref
     {...restProps}
-    class="flex items-center justify-center w-6 h-6 rounded-md border border-stroke-medium data-[state=checked]:bg-content-primary data-[state=indeterminate]:bg-content-primary data-[state=checked]:border-transparent data-[state=indeterminate]:border-transparent"
+    class="flex items-center justify-center w-6 h-6 rounded-md border border-stroke-medium data-[state=checked]:bg-content-secondary data-[state=indeterminate]:bg-content-secondary data-[state=checked]:border-transparent data-[state=indeterminate]:border-transparent"
 >
     {#snippet children({ checked, indeterminate })}
         {#if indeterminate}

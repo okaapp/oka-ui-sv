@@ -1,11 +1,10 @@
 type Theme = {
-    ID: number,
     ClassName: string,
     DisplayName: string,
     DisplayImage?: string,
+    MainAccent?: string,
 }
 type ThemeGroup = {
-    ID: number,
     Name: string,
     DisplayName: string,
     Themes: Theme[],
@@ -13,36 +12,75 @@ type ThemeGroup = {
 
 export const Themes: ThemeGroup[] = [
     {
-        ID: 0,
         Name: "light",
         DisplayName: "Giao diện sáng",
         Themes: [
             {
-                ID: 0,
                 ClassName: "default-light",
-                DisplayName: "Appta sáng"
+                DisplayName: "Appta sáng",
+                MainAccent: "#58C4F5",
             },
             {
-                ID: 1,
                 ClassName: "neutral-light",
-                DisplayName: "Trung tính sáng"
+                DisplayName: "Trung tính sáng",
+                MainAccent: "#70707b",
+            },
+            {
+                ClassName: "nord-light",
+                DisplayName: "Cực bắc sáng",
+                MainAccent: "#88C0D0",
             },
         ]
     },
     {
-        ID: 1,
         Name: "dark",
         DisplayName: "Giao diện tối",
         Themes: [
             {
-                ID: 0,
                 ClassName: "default-dark",
-                DisplayName: "Appta tối"
+                DisplayName: "Appta tối",
+                MainAccent: "#23598E",
             },
             {
-                ID: 1,
                 ClassName: "neutral-dark",
-                DisplayName: "Trung tính tối"
+                DisplayName: "Trung tính tối",
+                MainAccent: "#26262A",
+            },
+            {
+                ClassName: "nord-dark",
+                DisplayName: "Cực bắc tối",
+                MainAccent: "#4C566A",
+            },
+        ]
+    },
+    {
+        Name: "feng-shui",
+        DisplayName: "Phong thủy",
+        Themes: [
+            {
+                ClassName: "fengshui-kim",
+                DisplayName: "Mệnh Kim",
+                MainAccent: "#dfa30a",
+            },
+            {
+                ClassName: "fengshui-moc",
+                DisplayName: "Mệnh Mộc",
+                MainAccent: "#89c014",
+            },
+            {
+                ClassName: "fengshui-thuy",
+                DisplayName: "Mệnh Thủy",
+                MainAccent: "#0E93D3",
+            },
+            {
+                ClassName: "fengshui-hoa",
+                DisplayName: "Mệnh Hỏa",
+                MainAccent: "#FF6B3E",
+            },
+            {
+                ClassName: "fengshui-tho",
+                DisplayName: "Mệnh Thổ",
+                MainAccent: "#A26D4B",
             },
         ]
     },

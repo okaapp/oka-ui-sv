@@ -10,6 +10,11 @@
     import { Smiley } from "phosphor-svelte";
     import Badge from "$lib/components/core/badge/Badge.svelte";
     import ThemeSwitcher from "$lib/components/styling/theme-switcher/ThemeSwitcher.svelte";
+    import Pagination from "$lib/components/core/pagination/Pagination.svelte";
+    import Sidebar from "$lib/components/core/sidebar/Sidebar.svelte";
+    import type { SidebarItem } from "$lib/components/core/sidebar/Types.ts";
+    import { Package } from "phosphor-svelte";
+    import { Warehouse } from "phosphor-svelte";
 
     let xmplItems: SelectItem[] = [
         { value: "1", label: "1", subLabel: "Một" },
@@ -26,6 +31,10 @@
         { id: 2, label: "Thất bại" },
         { id: 3, label: "Xuất sắc" },
         { id: 4, label: "Không xác định" },
+    ];
+    const xmplSidebar: SidebarItem[] = [
+        { Label: "Sản phẩm", Icon: Package },
+        { Label: "Kho hàng", Icon: Warehouse },
     ];
 </script>
 
@@ -50,7 +59,6 @@
     <SingleSelect items={xmplItems} class=" w-56" />
     <MultiSelect items={xmplItems} class=" w-56" />
     <Input />
-    <Input placeholder="Nhập số" type="number" />
     <Separator orientation="vertical" />
     <div class="flex items-center gap-2">
         <Avatar src="img/test_avatar.jpg" />
@@ -74,4 +82,6 @@
             >
         {/each}
     </div>
+    <Pagination count={96} />
+    <Sidebar items={xmplSidebar} class="w-60 h-[800px]" />
 </div>

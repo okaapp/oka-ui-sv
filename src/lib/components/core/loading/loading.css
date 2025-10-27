@@ -1,0 +1,45 @@
+.loader {
+    position: relative;
+    display: inline-block;
+}
+
+.loader__rim {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.loader__ball {
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    animation: revolve 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    --amplitude: 40px;
+    --x: calc(cos(var(--angle)) * var(--amplitude));
+    --y: calc(sin(var(--angle)) * var(--amplitude));
+    translate: var(--x) var(--y);
+}
+
+@property --angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+}
+
+@keyframes revolve {
+    0% {
+        --angle: 0deg;
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        --angle: 360deg;
+        opacity: 1;
+    }
+}

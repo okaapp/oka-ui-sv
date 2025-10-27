@@ -1,58 +1,126 @@
-# Svelte library
+# OKA UI for Svelte
 
-Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
+OKA Tech UI Svelte component library built for the Appta software platform, offering a collection of customizable, accessible, and themeable components.
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+## Installation
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+```bash
+npm install @okaapp/oka-ui-sv
 ```
 
-## Developing
+### Required Peer Dependencies
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+This library requires the following peer dependencies to be installed:
 
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```bash
+npm install svelte@^5.0.0 @sveltejs/kit@^2.22.0 bits-ui@^2.9.8 phosphor-svelte@^3.0.1
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+## Setup
 
-## Building
+### 1. Style Provider
 
-To build your library:
+All components must be wrapped in the `OKAStyleProvider` component for proper styling. Add it to your root layout file:
 
-```sh
-npm pack
+```svelte
+<!-- src/routes/+layout.svelte -->
+<script lang="ts">
+    import { OKAStyleProvider } from "@okaapp/oka-ui-sv";
+</script>
+
+<OKAStyleProvider>
+    <slot />
+</OKAStyleProvider>
 ```
 
-To create a production version of your showcase app:
+### 2. Theme Setup
 
-```sh
-npm run build
+To avoid Flash of Unstyled Content (FOUC), add the following script to your app's HTML file:
+
+```html
+<!-- src/app.html -->
+<body>
+    <div>%sveltekit.body%</div>
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'default-light';
+        document.body.classList.add(savedTheme);
+    </script>
+</body>
 ```
 
-You can preview the production build with `npm run preview`.
+## Available Themes
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+OKA UI comes with several built-in themes:
 
-## Publishing
+- Light themes:
+  - `default-light`
+  - `neutral-light`
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+- Dark themes:
+  - `default-dark`
+  - `neutral-dark`
+  - `nord-dark`
 
-To publish your library to [npm](https://www.npmjs.com):
+- Fengshui themes:
+  - `fengshui-kim` (Metal)
+  - `fengshui-moc` (Wood)
+  - `fengshui-thuy` (Water)
+  - `fengshui-hoa` (Fire)
+  - `fengshui-tho` (Earth)
 
-```sh
-npm publish
+## Components
+
+### Core Components as of 0.1.0
+
+- Avatar
+- Badge
+- Button
+- Checkbox
+- Input
+- Loading
+- Pagination
+- Select (Single & Multi)
+- Separator
+- Sidebar
+
+### Usage Example
+
+```svelte
+<script>
+    import { Button, Avatar, Badge } from "@okaapp/oka-ui-sv";
+</script>
+
+<Button variant="primary">Click me</Button>
+
+<Avatar src="/path/to/image.jpg" alt="User avatar" size="md" />
+
+<Badge color="success">Complete</Badge>
 ```
+
+## Theme Switching
+
+The library includes a `ThemeSwitcher` component for easy theme management:
+
+```svelte
+<script>
+    import { ThemeSwitcher } from "@okaapp/oka-ui-sv";
+</script>
+
+<ThemeSwitcher />
+```
+
+## Contributing
+
+Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
+
+## License
+
+MIT License - see LICENSE file for details.
+
+## Acknowledgments
+
+Built with:
+- [Svelte](https://svelte.dev)
+- [SvelteKit](https://kit.svelte.dev)
+- [bits-ui](https://bits-ui.com)
+- [phosphor-svelte](https://github.com/phosphor-icons/svelte)

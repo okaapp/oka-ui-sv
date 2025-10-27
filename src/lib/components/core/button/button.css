@@ -1,0 +1,88 @@
+.button {
+    width: 100%;
+    min-width: 128px;
+    cursor: pointer;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: all 300ms ease;
+}
+
+.button:active {
+    scale: 0.98;
+}
+
+.button--primary {
+    background-color: var(--action-primary);
+    color: var(--content-inversed);
+}
+
+.button--primary:hover {
+    background-color: var(--action-primary-hover);
+}
+
+.button--primary:active {
+    background-color: var(--action-primary-press);
+}
+
+.button--primary:disabled {
+    background-color: var(--action-primary-muted);
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.button--secondary {
+    background-color: var(--action-secondary);
+    color: var(--accent-primary-content);
+}
+
+.button--secondary:hover {
+    background-color: var(--action-secondary-hover);
+}
+
+.button--secondary:active {
+    background-color: var(--action-secondary-press);
+}
+
+.button--secondary:disabled {
+    color: var(--content-muted);
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.button--tertiary {
+    background: none;
+    color: var(--accent-primary-content);
+}
+
+.button--tertiary:hover {
+    background-color: var(--action-secondary-hover);
+}
+
+.button--tertiary:active {
+    background-color: var(--action-secondary-press);
+}
+
+.button--tertiary:disabled {
+    color: var(--content-muted);
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.button--destructive {
+    background-color: var(--action-error);
+    color: var(--content-inversed);
+}
+
+.button--destructive:hover {
+    opacity: 0.8;
+}
+
+.button--destructive:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: not-allowed;
+}

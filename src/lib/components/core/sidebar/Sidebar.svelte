@@ -1,5 +1,6 @@
 <script lang="ts">
-    import type { SidebarItem } from "./Types.ts";
+    import "./sidebar.css";
+    import type { SidebarItem } from "./Types.js";
     import { IconContext } from "phosphor-svelte";
     import { page } from "$app/state";
 
@@ -16,10 +17,10 @@
     });
 </script>
 
-<div class={`${className} flex flex-col gap-1 min-w-60 p-6`}>
+<div class={`${className} sidebar`}>
     {#each items as i}
         <div
-            class={`w-full h-fit flex items-center gap-2 p-3 rounded-xl text-base active:scale-[0.98] ${i.Route === activeItem ? "bg-accent-primary-content text-content-inversed font-bold" : "cursor-pointer text-content-secondary bg-transparent hover:bg-action-secondary-hover active:bg-action-secondary-press font-medium transition-all duration-300"}`}
+            class={`sidebar-item ${i.Route === activeItem ? "sidebar-item--active" : "sidebar-item--inactive"}`}
         >
             {#if i.Icon}
                 <IconContext
@@ -28,10 +29,7 @@
                     <i.Icon></i.Icon>
                 </IconContext>
             {/if}
-            <span
-                class="line-clamp-1 text-ellipsis w-full text-left transition-all duration-300"
-                >{i.Label}</span
-            >
+            <span class="sidebar-item__label">{i.Label}</span>
         </div>
     {/each}
 </div>

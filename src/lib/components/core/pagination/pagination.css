@@ -1,0 +1,118 @@
+.pagination {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--surface-primary);
+    width: 100%;
+    height: fit-content;
+    min-width: 600px;
+    transition: all 300ms ease;
+}
+
+.pagination__info {
+    font-size: 14px;
+    color: var(--content-secondary);
+    transition: all 300ms ease;
+    width: fit-content;
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.pagination__controls {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 4px;
+    justify-content: flex-end;
+}
+
+.pagination__button {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: transparent;
+    color: var(--accent-primary-content);
+    transition: all 300ms ease;
+}
+
+.pagination__button:hover:not(:disabled) {
+    background-color: var(--action-secondary-hover);
+}
+
+.pagination__button:active:not(:disabled) {
+    transform: scale(0.98);
+    background-color: var(--action-secondary-press);
+}
+
+.pagination__button:disabled {
+    color: var(--content-muted);
+    cursor: not-allowed;
+}
+
+.pagination__button:disabled:hover {
+    background-color: transparent;
+}
+
+.pagination__button-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.pagination__ellipsis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-primary-content);
+    user-select: none;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    transition: all 300ms ease;
+}
+
+.pagination__page {
+    user-select: none;
+    font-size: 16px;
+}
+
+.pagination__page[data-selected] {
+    background-color: var(--accent-primary-content) !important;
+    color: var(--content-inversed) !important;
+}
+
+/* <div class="flex items-center w-full gap-1 justify-end">
+                <Pagination.PrevButton
+                    class="hover:bg-action-secondary-hover disabled:text-content-muted inline-flex size-10 items-center justify-center rounded-xl bg-transparent text-accent-primary-content active:scale-[0.98] active:bg-action-secondary-press disabled:cursor-not-allowed hover:disabled:bg-transparent transition-all duration-300"
+                >
+                    <CaretLeft class="size-6" />
+                </Pagination.PrevButton>
+                {#each pages as page (page.key)}
+                    {#if page.type === "ellipsis"}
+                        <div
+                            class="flex items-center justify-center text-accent-primary-content select-none text-base size-10 rounded-xl transition-all duration-300"
+                        >
+                            ...
+                        </div>
+                    {:else}
+                        <Pagination.Page
+                            {page}
+                            class="hover:bg-action-secondary-hover disabled:text-content-muted text-base data-selected:bg-accent-primary-content data-selected:text-content-inversed inline-flex select-none size-10 items-center justify-center rounded-xl bg-transparent text-accent-primary-content active:scale-[0.98] active:bg-action-secondary-press disabled:cursor-not-allowed hover:disabled:bg-transparent transition-all duration-300"
+                        >
+                            {page.value}
+                        </Pagination.Page>
+                    {/if}
+                {/each}
+                <Pagination.NextButton
+                    class="hover:bg-action-secondary-hover disabled:text-content-muted inline-flex size-10 items-center justify-center rounded-xl bg-transparent text-accent-primary-content active:scale-[0.98] active:bg-action-secondary-press disabled:cursor-not-allowed hover:disabled:bg-transparent transition-all duration-300"
+                >
+                    <CaretRight class="size-6" />
+                </Pagination.NextButton>
+            </div> */

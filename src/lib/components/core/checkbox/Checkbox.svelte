@@ -1,4 +1,5 @@
 <script lang="ts">
+    import "./checkbox.css";
     import {
         Checkbox,
         // Label,
@@ -21,18 +22,12 @@
     } = $props();
 </script>
 
-<Checkbox.Root
-    {id}
-    bind:checked
-    bind:ref
-    {...restProps}
-    class="flex items-center justify-center w-6 h-6 rounded-md border border-stroke-medium data-[state=checked]:bg-content-secondary data-[state=indeterminate]:bg-content-secondary data-[state=checked]:border-transparent data-[state=indeterminate]:border-transparent"
->
+<Checkbox.Root {id} bind:checked bind:ref {...restProps} class="checkbox">
     {#snippet children({ checked, indeterminate })}
         {#if indeterminate}
-            <Minus class="size-5 text-content-inversed" />
+            <Minus class="checkbox__icon" />
         {:else if checked}
-            <Check class="size-5 text-content-inversed" />
+            <Check class="checkbox__icon" />
         {/if}
     {/snippet}
 </Checkbox.Root>

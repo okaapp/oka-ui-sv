@@ -1,0 +1,203 @@
+.select-trigger {
+    display: inline-flex;
+    gap: 4px;
+    min-width: 160px;
+    /* min-w-40 */
+    width: 100%;
+    height: 48px;
+    /* h-12 */
+    border-radius: 12px;
+    /* rounded-xl */
+    align-items: center;
+    border: 1px solid var(--stroke-light);
+    padding: 12px;
+    /* p-3 */
+    font-size: 16px;
+    /* text-base */
+    color: var(--content-primary);
+    font-weight: 500;
+    /* font-medium */
+    background-color: var(--surface-primary);
+    touch-action: none;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.select-trigger:hover {
+    background-color: var(--surface-secondary);
+    border-color: var(--stroke-medium);
+}
+
+.select-trigger[data-state="open"] {
+    border-color: transparent;
+    outline: 2px solid var(--accent-primary);
+}
+
+.select-trigger:focus-visible {
+    border-color: transparent;
+    outline: 2px solid var(--accent-primary);
+}
+
+.select-trigger[data-placeholder] {
+    color: var(--content-tertiary);
+    font-weight: normal;
+}
+
+.select-trigger:disabled {
+    cursor: not-allowed;
+    background-color: var(--surface-tertiary);
+    border-color: var(--stroke-muted);
+}
+
+.select-trigger:invalid {
+    border-color: transparent;
+    outline: 1.5px solid var(--stroke-error);
+}
+
+.select-trigger-text {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-align: start;
+    overflow: hidden;
+}
+
+.select-trigger-icon {
+    color: var(--content-primary);
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    transition: transform 300ms ease;
+}
+
+.select-trigger:disabled .select-trigger-icon {
+    color: var(--content-muted);
+}
+
+.select-trigger[data-state="open"] .select-trigger-icon {
+    transform: rotate(180deg);
+}
+
+.select-content {
+    border-radius: 12px;
+    border: 1px solid var(--stroke-light);
+    padding: 8px;
+    background-color: var(--surface-primary);
+    outline: none;
+    z-index: 50;
+    height: 320px;
+    max-height: var(--bits-select-content-available-height);
+    width: var(--bits-select-anchor-width);
+    min-width: var(--bits-select-anchor-width);
+    transition: all 300ms ease;
+}
+
+.select-scroll-button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-scroll-button-icon {
+    width: 12px;
+    height: 12px;
+}
+
+.select-viewport {
+    padding: 4px;
+}
+
+.select-item {
+    border-radius: 8px;
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    user-select: none;
+    align-items: center;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.select-item:hover {
+    background-color: var(--surface-secondary);
+}
+
+.select-item[data-highlighted] {
+    background-color: var(--surface-secondary);
+}
+
+.select-item[data-disabled] {
+    color: var(--content-muted);
+}
+
+/* Single select specific styles */
+.select-item[data-selected] {
+    background-color: var(--accent-primary-surface);
+}
+
+.select-item .select-item-content {
+    display: flex;
+    flex-direction: column;
+    color: var(--content-primary);
+}
+
+.select-item .select-item-check {
+    margin-left: auto;
+    color: var(--accent-primary-content);
+    width: 24px;
+    height: 24px;
+}
+
+/* Multi select specific styles */
+.select-item--multi {
+    gap: 12px;
+}
+
+.select-item--multi .select-item-content {
+    display: flex;
+    flex-direction: column;
+    color: var(--content-primary);
+}
+
+.select-item-sublabel {
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--content-secondary);
+}
+
+/* Animation classes - these match the Tailwind animations */
+.select-content[data-state="open"] {
+    animation: select-content-in 300ms ease;
+}
+
+.select-content[data-state="closed"] {
+    animation: select-content-out 300ms ease;
+}
+
+@keyframes select-content-in {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes select-content-out {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}

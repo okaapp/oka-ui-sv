@@ -1,0 +1,21 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: 1px solid var(--stroke-medium);
+}
+
+.checkbox[data-state="checked"],
+.checkbox[data-state="indeterminate"] {
+    background-color: var(--content-secondary);
+    border-color: transparent;
+}
+
+.checkbox__icon {
+    width: 20px;
+    height: 20px;
+    color: var(--content-inversed);
+}

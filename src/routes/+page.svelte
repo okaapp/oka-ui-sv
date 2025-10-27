@@ -1,4 +1,5 @@
 <script lang="ts">
+    import "./page.css";
     import Button from "$lib/components/core/button/Button.svelte";
     import SingleSelect from "$lib/components/core/select/SingleSelect.svelte";
     import Input from "$lib/components/core/input/Input.svelte";
@@ -12,7 +13,7 @@
     import ThemeSwitcher from "$lib/components/styling/theme-switcher/ThemeSwitcher.svelte";
     import Pagination from "$lib/components/core/pagination/Pagination.svelte";
     import Sidebar from "$lib/components/core/sidebar/Sidebar.svelte";
-    import type { SidebarItem } from "$lib/components/core/sidebar/Types.ts";
+    import type { SidebarItem } from "$lib/components/core/sidebar/Types.js";
     import { Package } from "phosphor-svelte";
     import { Warehouse } from "phosphor-svelte";
 
@@ -38,42 +39,40 @@
     ];
 </script>
 
-<div class="m-10 flex flex-col gap-4 w-[560px]">
-    <div class="flex gap-6 items-center h-fit">
+<div class="page-container">
+    <div class="header">
         <Loading />
-        <div class="flex flex-col gap-0 h-fit">
-            <h1 class="display-font text-5xl text-content-secondary">Oka UI</h1>
-            <h3 class="display-font text-2xl text-content-primary">
-                Components Library
-            </h3>
+        <div class="header__title">
+            <h1 class="header__title-main">Oka UI</h1>
+            <h3 class="header__title-sub">Components Library</h3>
         </div>
     </div>
     <ThemeSwitcher />
     <Separator orientation="horizontal" />
-    <div class="flex items-center gap-3 w-full">
+    <div class="button-group">
         <Button>Húp</Button>
         <Button variant="secondary">Húp</Button>
         <Button variant="tertiary">Húp</Button>
         <Button disabled>Húp</Button>
     </div>
-    <SingleSelect items={xmplItems} class=" w-56" />
-    <MultiSelect items={xmplItems} class=" w-56" />
+    <SingleSelect items={xmplItems} class="select-container" />
+    <MultiSelect items={xmplItems} class="select-container" />
     <Input />
     <Separator orientation="vertical" />
-    <div class="flex items-center gap-2">
+    <div class="avatar-group">
         <Avatar src="img/test_avatar.jpg" />
         <Avatar fallback="AB" />
         <Avatar iconFallback />
         <Avatar iconFallback size="lg" />
     </div>
-    <div class="flex items-center gap-2 flex-wrap">
+    <div class="badge-group">
         <Badge color="blue">Mì tôm</Badge>
         <Badge color="pink" variant="outline">Mì tôm</Badge>
         <Badge color="severe" size="sm">Mì tôm</Badge>
         <Badge color="success"><Smiley />Mì tôm</Badge>
-        <Badge color="indigo" size="sm" variant="outline"
-            ><Smiley />Mì tôm</Badge
-        >
+        <Badge color="indigo" size="sm" variant="outline">
+            <Smiley />Mì tôm
+        </Badge>
         {#each badgeItemExample as i}
             <Badge
                 color={badgeColorMapExample[
@@ -83,5 +82,5 @@
         {/each}
     </div>
     <Pagination count={96} />
-    <Sidebar items={xmplSidebar} class="w-60 h-[800px]" />
+    <Sidebar items={xmplSidebar} class="sidebar-demo" />
 </div>

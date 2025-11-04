@@ -3,6 +3,6 @@ import type { Component } from "svelte"
 
 export type SidebarItem = {
     Label: string,
-    Route?: string,
+    Route: string,
     Icon?: Component<IconComponentProps, {}, "">,
 }

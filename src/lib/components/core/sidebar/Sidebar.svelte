@@ -19,7 +19,8 @@
 
 <div class={`${className} sidebar`}>
     {#each items as i}
-        <div
+        <a
+            href={i.Route}
             class={`sidebar-item ${i.Route === activeItem ? "sidebar-item--active" : "sidebar-item--inactive"}`}
         >
             {#if i.Icon}
@@ -30,6 +31,6 @@
                 </IconContext>
             {/if}
             <span class="sidebar-item__label">{i.Label}</span>
-        </div>
+        </a>
     {/each}
 </div>

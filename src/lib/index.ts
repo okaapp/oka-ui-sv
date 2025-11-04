@@ -19,6 +19,6 @@ export { default as ThemeSwitcher } from './components/styling/theme-switcher/Th
 export { default as SVG31 } from './components/illustrations/SVG31.svelte';
 
 // Types
-export * from './components/core/select/Types.js';
-export * from './components/core/sidebar/Types.js';
-export * from './components/styling/theme-switcher/Themes.js';
+export type * from './components/core/select/Types.js';
+export type * from './components/core/sidebar/Types.js';
+export type * from './components/styling/theme-switcher/Themes.js';

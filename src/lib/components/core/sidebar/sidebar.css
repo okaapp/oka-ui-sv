@@ -24,7 +24,7 @@
 .sidebar-item--active {
     background-color: var(--accent-primary-content);
     color: var(--content-inversed);
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .sidebar-item--inactive {

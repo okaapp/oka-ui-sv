@@ -8,12 +8,14 @@
     import CaretDoubleDown from "phosphor-svelte/lib/CaretDoubleDown";
 
     let {
+        value = $bindable(),
         items = [] as SelectItem[],
         placeholder = "Chọn ở đây",
+        class: className,
         ...props
     } = $props();
 
-    let value = $state<string>("");
+    // let value = $state<string>("");
     const selectedLabel = $derived(
         value ? items.find((item) => item.value === value)?.label : placeholder,
     );
@@ -26,14 +28,14 @@
     {...props}
 >
     <Select.Trigger
-        class="select-trigger focus-override"
+        class={`select-trigger focus-override`}
         aria-label="Chọn ở đây"
     >
         <span class="select-trigger-text">{selectedLabel}</span>
         <CaretDown class="select-trigger-icon" />
     </Select.Trigger>
     <Select.Portal>
-        <Select.Content class="select-content" sideOffset={8}>
+        <Select.Content class="select-content" sideOffset={12}>
             <Select.ScrollUpButton class="select-scroll-button">
                 <CaretDoubleUp class="select-scroll-button-icon" />
             </Select.ScrollUpButton>

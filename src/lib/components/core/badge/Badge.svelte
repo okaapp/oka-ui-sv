@@ -10,8 +10,9 @@
     } = $props();
 
     const iconSizes = {
-        md: 24,
-        sm: 16,
+        lg: 24,
+        md: 16,
+        sm: 12,
     };
 </script>
 

@@ -15,16 +15,22 @@
 }
 
 /* Sizes */
-.badge--md {
+.badge--lg {
     padding: 8px 12px;
     border-radius: 12px;
     font-size: 16px;
 }
 
-.badge--sm {
+.badge--md {
     padding: 6px 8px;
     border-radius: 8px;
     font-size: 14px;
+}
+
+.badge--sm {
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: 12px;
 }
 
 /* Colors */

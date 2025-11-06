@@ -11,17 +11,14 @@
 
     let { items, class: className }: Props = $props();
 
-    let activeItem = $state(page.url.pathname);
-    $effect(() => {
-        activeItem = page.url.pathname;
-    });
+    let currentRoute = $derived(page.url.pathname);
 </script>
 
 <div class={`${className} sidebar`}>
     {#each items as i}
         <a
             href={i.Route}
-            class={`sidebar-item ${i.Route === activeItem ? "sidebar-item--active" : "sidebar-item--inactive"}`}
+            class={`sidebar-item ${currentRoute.startsWith(i.Route) ? "sidebar-item--active" : "sidebar-item--inactive"}`}
         >
             {#if i.Icon}
                 <IconContext

@@ -76,23 +76,6 @@
     animation: content-out 300ms ease;
 }
 
-/* Position adjustments */
-.theme-content[data-side="bottom"] {
-    transform: translateY(4px);
-}
-
-.theme-content[data-side="left"] {
-    transform: translateX(-4px);
-}
-
-.theme-content[data-side="right"] {
-    transform: translateX(4px);
-}
-
-.theme-content[data-side="top"] {
-    transform: translateY(-4px);
-}
-
 /* Viewport styles */
 .theme-viewport {
     display: flex;

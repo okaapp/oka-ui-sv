@@ -19,6 +19,8 @@
 
     const sizes = {
         lg: "height: 48px; padding: 12px; font-size: 16px;",
+        md: "height: 40px; padding: 8px; font-size: 16px;",
+        sm: "height: 36px; padding: 6px; font-size: 14px;",
     };
 </script>
 

@@ -29,7 +29,7 @@
         <span class="theme-switcher__label">Giao diện</span>
     </Select.Trigger>
     <Select.Portal>
-        <Select.Content class="theme-content" sideOffset={8}>
+        <Select.Content class="theme-content" sideOffset={12}>
             <Select.ScrollUpButton class="theme-scroll-button">
                 <CaretDoubleUp class="theme-scroll-button__icon" />
             </Select.ScrollUpButton>

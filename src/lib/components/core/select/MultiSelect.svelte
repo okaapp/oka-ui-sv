@@ -8,12 +8,13 @@
     import Checkbox from "../checkbox/Checkbox.svelte";
 
     let {
+        value = $bindable([]),
         items = [] as SelectItem[],
         placeholder = "Chọn ở đây",
         ...props
     } = $props();
 
-    let value = $state<string[]>([]);
+    // let value = $state<string[]>([]);
     const selectedLabel = $derived(
         value.length > 0 ? `Đã chọn ${value.length}` : placeholder,
     );
@@ -36,7 +37,7 @@
         <CaretDown class="select-trigger-icon" />
     </Select.Trigger>
     <Select.Portal>
-        <Select.Content class="select-content" sideOffset={8}>
+        <Select.Content class="select-content" sideOffset={12}>
             <Select.ScrollUpButton class="select-scroll-button">
                 <CaretDoubleUp class="select-scroll-button-icon" />
             </Select.ScrollUpButton>

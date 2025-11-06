@@ -34,8 +34,8 @@
         { id: 4, label: "Không xác định" },
     ];
     const xmplSidebar: SidebarItem[] = [
-        { Label: "Sản phẩm", Icon: Package, Route: "" },
-        { Label: "Kho hàng", Icon: Warehouse, Route: "" },
+        { Label: "Sản phẩm", Icon: Package, Route: "/" },
+        { Label: "Kho hàng", Icon: Warehouse, Route: "/abc" },
     ];
 </script>
 

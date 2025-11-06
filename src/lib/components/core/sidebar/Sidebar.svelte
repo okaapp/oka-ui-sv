@@ -18,7 +18,7 @@
     {#each items as i}
         <a
             href={i.Route}
-            class={`sidebar-item ${currentRoute.startsWith(i.Route) ? "sidebar-item--active" : "sidebar-item--inactive"}`}
+            class={`sidebar-item ${currentRoute === i.Route || (currentRoute + "/").startsWith(i.Route + "/") ? "sidebar-item--active" : "sidebar-item--inactive"}`}
         >
             {#if i.Icon}
                 <IconContext

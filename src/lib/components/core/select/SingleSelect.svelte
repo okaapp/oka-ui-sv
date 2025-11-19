@@ -15,7 +15,6 @@
         ...props
     } = $props();
 
-    // let value = $state<string>("");
     const selectedLabel = $derived(
         value ? items.find((item) => item.value === value)?.label : placeholder,
     );
@@ -58,7 +57,7 @@
                                 {/if}
                             </div>
                             {#if selected}
-                                <div class="ml-auto">
+                                <div class="left-margin-push">
                                     <Check
                                         aria-label="Đang được chọn"
                                         class="select-item-check"

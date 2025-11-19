@@ -16,6 +16,7 @@
     import type { SidebarItem } from "$lib/components/core/sidebar/Types.js";
     import { Package } from "phosphor-svelte";
     import { Warehouse } from "phosphor-svelte";
+    import Dialog from "$lib/components/core/dialog/Dialog.svelte";
 
     let xmplItems: SelectItem[] = [
         { value: "1", label: "1", subLabel: "Một" },
@@ -50,14 +51,34 @@
     <ThemeSwitcher />
     <Separator orientation="horizontal" />
     <div class="button-group">
-        <Button>Húp</Button>
-        <Button variant="secondary">Húp</Button>
-        <Button variant="tertiary">Húp</Button>
-        <Button disabled>Húp</Button>
+        <Button><Smiley class="test-icon" />Húp</Button>
+        <Button variant="secondary"><Smiley class="test-icon" />Húp</Button>
+        <Button variant="tertiary"><Smiley class="test-icon" />Húp</Button>
+        <Button disabled><Smiley class="test-icon" />Húp</Button>
+    </div>
+    <div class="button-group">
+        <Button size="md"><Smiley />Húp</Button>
+        <Button size="md" variant="secondary"><Smiley />Húp</Button>
+        <Button size="md" variant="tertiary"><Smiley />Húp</Button>
+        <Button size="md" disabled><Smiley />Húp</Button>
     </div>
     <SingleSelect items={xmplItems} class="select-container" />
     <MultiSelect items={xmplItems} class="select-container" />
     <Input />
+    <Dialog>
+        {#snippet trigger()}
+            <div>Open</div>
+        {/snippet}
+        {#snippet title()}
+            Account settings
+        {/snippet}
+
+        {#snippet description()}
+            Manage your account settings and preferences.
+        {/snippet}
+
+        <!-- Additional dialog content here... -->
+    </Dialog>
     <Separator orientation="vertical" />
     <div class="avatar-group">
         <Avatar src="img/test_avatar.jpg" />

@@ -59,8 +59,8 @@
     outline: none;
     background-color: var(--surface-primary);
     z-index: 50;
-    height: 320px;
-    min-height: 400px;
+    height: fit-content;
+    min-height: 280px;
     max-height: var(--bits-select-content-available-height);
     width: 520px;
     min-width: var(--bits-select-anchor-width);

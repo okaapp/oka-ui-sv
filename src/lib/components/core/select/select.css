@@ -24,7 +24,6 @@
 }
 
 .select-trigger:hover {
-    background-color: var(--surface-secondary);
     border-color: var(--stroke-medium);
 }
 
@@ -86,7 +85,7 @@
     background-color: var(--surface-primary);
     outline: none;
     z-index: 50;
-    height: 320px;
+    height: fit-content;
     max-height: var(--bits-select-content-available-height);
     width: var(--bits-select-anchor-width);
     min-width: var(--bits-select-anchor-width);
@@ -176,6 +175,10 @@
 
 .select-content[data-state="closed"] {
     animation: select-content-out 300ms ease;
+}
+
+.left-margin-push {
+    margin-left: auto;
 }
 
 @keyframes select-content-in {

@@ -322,9 +322,9 @@ body.nord-light {
     --accent-primary: #88C0D0;
     --accent-primary-content: #2E3440;
     --accent-primary-surface: #D8DEE9;
-    --accent-secondary: #BF616A;
-    --accent-secondary-content: #53383d;
-    --accent-secondary-surface: #fcedf0;
+    --accent-secondary: #b93552;
+    --accent-secondary-content: #52212d;
+    --accent-secondary-surface: #f7e0e8;
     --action-primary: #88C0D0;
     --action-primary-hover: #8FBCBB;
     --action-primary-muted: #C0CAD6;
@@ -351,9 +351,9 @@ body.nord-dark {
     --accent-primary: #88C0D0;
     --accent-primary-content: #ECEFF4;
     --accent-primary-surface: #3B4252;
-    --accent-secondary: #BF616A;
-    --accent-secondary-content: #f4ecec;
-    --accent-secondary-surface: #6a4c4e;
+    --accent-secondary: #b83556;
+    --accent-secondary-content: #f7e0e8;
+    --accent-secondary-surface: #52212d;
     --action-primary: #88C0D0;
     --action-primary-hover: #8FBCBB;
     --action-primary-muted: #4C566A;
@@ -437,10 +437,10 @@ body.nord-dark {
 
 body.fengshui-kim {
     --accent-primary: #F99D1B;
-    --accent-primary-content: #3A2600;
+    --accent-primary-content: #442f07;
     --accent-primary-surface: #FFF3D6;
     --accent-secondary: #FFD463;
-    --accent-secondary-content: #3A2600;
+    --accent-secondary-content: #463500;
     --accent-secondary-surface: #FFEFBE;
 
     --action-primary: #dfa30a;
@@ -452,7 +452,7 @@ body.fengshui-kim {
     --action-secondary-press: #FFE6A0;
 
     --content-inversed: #FFF8E9;
-    --content-muted: #7A6C4A;
+    --content-muted: #dad1bc;
     --content-primary: #2C1B00;
     --content-secondary: #5C4500;
     --content-tertiary: #8C7C5C;
@@ -470,15 +470,15 @@ body.fengshui-kim {
 
 body.fengshui-moc {
     --accent-primary: #BDE23A;
-    --accent-primary-content: #2C3A1A;
+    --accent-primary-content: #314419;
     --accent-primary-surface: #F4FBE4;
-    --accent-secondary: #7DBA1F;
-    --accent-secondary-content: #F4FBE4;
-    --accent-secondary-surface: #C9E78A;
+    --accent-secondary: #31ba1f;
+    --accent-secondary-content: #133f12;
+    --accent-secondary-surface: #99e78a;
 
     --action-primary: #89c014;
     --action-primary-hover: #BDE23A;
-    --action-primary-muted: #E6F4C7;
+    --action-primary-muted: #e4ebd5;
     --action-primary-press: #93C82A;
     --action-secondary: #e3eccc;
     --action-secondary-hover: #E9F5C2;
@@ -503,11 +503,11 @@ body.fengshui-moc {
 
 body.fengshui-thuy {
     --accent-primary: #0E93D3;
-    --accent-primary-content: #031F2C;
-    --accent-primary-surface: #F1FAFF;
-    --accent-secondary: #37B2E8;
-    --accent-secondary-content: #F1FAFF;
-    --accent-secondary-surface: #D7F0FC;
+    --accent-primary-content: #0c3547;
+    --accent-primary-surface: #d6e8f1;
+    --accent-secondary: #37e8e8;
+    --accent-secondary-content: #0e4444;
+    --accent-secondary-surface: #d7fbfc;
 
     --action-primary: #37B2E8;
     --action-primary-hover: #0E93D3;
@@ -518,7 +518,7 @@ body.fengshui-thuy {
     --action-secondary-press: #CDEBFA;
 
     --content-inversed: #F1FAFF;
-    --content-muted: #4B6B7E;
+    --content-muted: #ccdae2;
     --content-primary: #031F2C;
     --content-secondary: #08384F;
     --content-tertiary: #547C91;
@@ -530,16 +530,16 @@ body.fengshui-thuy {
     --stroke-xtrabold: #031F2C;
 
     --surface-primary: #FFF;
-    --surface-secondary: #F7FCFF;
-    --surface-tertiary: #F1FAFF;
+    --surface-secondary: #ebf4fa;
+    --surface-tertiary: #d6e8f1;
 }
 
 body.fengshui-hoa {
     --accent-primary: #F5272E;
-    --accent-primary-content: #280403;
+    --accent-primary-content: #3d0f0e;
     --accent-primary-surface: #FFF4F2;
     --accent-secondary: #FF6B3E;
-    --accent-secondary-content: #FFF4F2;
+    --accent-secondary-content: #42160f;
     --accent-secondary-surface: #FFE3DA;
 
     --action-primary: #FF6B3E;
@@ -551,7 +551,7 @@ body.fengshui-hoa {
     --action-secondary-press: #FFD2C8;
 
     --content-inversed: #FFF4F2;
-    --content-muted: #80524A;
+    --content-muted: #e4cdca;
     --content-primary: #280403;
     --content-secondary: #512620;
     --content-tertiary: #7A4138;
@@ -569,10 +569,10 @@ body.fengshui-hoa {
 
 body.fengshui-tho {
     --accent-primary: #683820;
-    --accent-primary-content: #2E1C12;
+    --accent-primary-content: #3d271b;
     --accent-primary-surface: #F7EFE8;
     --accent-secondary: #A26D4B;
-    --accent-secondary-content: #FCF7F3;
+    --accent-secondary-content: #3f240f;
     --accent-secondary-surface: #F1E3D8;
 
     --action-primary: #A26D4B;
@@ -584,8 +584,8 @@ body.fengshui-tho {
     --action-secondary-press: #EBDACF;
 
     --content-inversed: #FCF7F3;
-    --content-muted: #7D6C60;
-    --content-primary: #2E1C12;
+    --content-muted: #ddd7c7;
+    --content-primary: #3f281b;
     --content-secondary: #533B2C;
     --content-tertiary: #8C7766;
 

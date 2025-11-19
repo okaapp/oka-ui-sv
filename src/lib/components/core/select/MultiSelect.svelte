@@ -14,7 +14,6 @@
         ...props
     } = $props();
 
-    // let value = $state<string[]>([]);
     const selectedLabel = $derived(
         value.length > 0 ? `Đã chọn ${value.length}` : placeholder,
     );

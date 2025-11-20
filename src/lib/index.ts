@@ -3,6 +3,7 @@ export { default as Avatar } from './components/core/avatar/Avatar.svelte';
 export { default as Badge } from './components/core/badge/Badge.svelte';
 export { default as Button } from './components/core/button/Button.svelte';
 export { default as Checkbox } from './components/core/checkbox/Checkbox.svelte';
+export { default as Dialog } from './components/core/dialog/Dialog.svelte';
 export { default as Input } from './components/core/input/Input.svelte';
 export { default as Loading } from './components/core/loading/Loading.svelte';
 export { default as Pagination } from './components/core/pagination/Pagination.svelte';

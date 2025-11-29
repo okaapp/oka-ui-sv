@@ -17,6 +17,8 @@
     import { Package } from "phosphor-svelte";
     import { Warehouse } from "phosphor-svelte";
     import Dialog from "$lib/components/core/dialog/Dialog.svelte";
+    import PinInput from "$lib/components/core/pin-input/PinInput.svelte";
+    import Tooltips from "$lib/components/core/tooltips/Tooltips.svelte";
 
     let xmplItems: SelectItem[] = [
         { value: "1", label: "1", subLabel: "Một" },
@@ -65,6 +67,13 @@
     <SingleSelect items={xmplItems} class="select-container" />
     <MultiSelect items={xmplItems} class="select-container" />
     <Input />
+    <PinInput maxlength={6} />
+    <Tooltips>
+        {#snippet trigger()}
+            <Smiley />
+        {/snippet}
+        Hello my name is Tu
+    </Tooltips>
     <Dialog>
         {#snippet trigger()}
             <div>Open</div>

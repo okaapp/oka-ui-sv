@@ -17,9 +17,12 @@
         placeholder = "Nhập vào đây",
         ref = $bindable(null),
         value = $bindable(),
+        invalid = $bindable(false),
         class: className,
         ...restProps
-    }: Props = $props();
+    }: Props & {
+        invalid?: boolean;
+    } = $props();
 </script>
 
 <input
@@ -27,6 +30,7 @@
     bind:this={ref}
     data-slot="input"
     class="input focus-override"
+    class:input--invalid={invalid}
     style="font: inherit;"
     bind:value
     {...restProps}

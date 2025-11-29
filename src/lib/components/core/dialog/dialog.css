@@ -21,11 +21,32 @@
     width: fit-content;
     max-width: 800px;
     min-width: 480px;
+    max-height: calc(100vh - 48px);
     border-radius: 12px;
     background-color: var(--surface-primary);
     transform: translate(-50%, -50%);
     outline: none;
     overflow: clip;
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog-content--sm {
+    width: 480px;
+    min-width: 480px;
+    max-width: 480px;
+}
+
+.dialog-content--md {
+    width: 600px;
+    min-width: 600px;
+    max-width: 600px;
+}
+
+.dialog-content--lg {
+    width: 800px;
+    min-width: 800px;
+    max-width: 800px;
 }
 
 .dialog-content[data-state="open"] {
@@ -83,9 +104,8 @@
 .dialog-body {
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    width: 100%;
     min-width: 480px;
-    max-width: 480px;
     padding: 16px;
     gap: 16px;
 }

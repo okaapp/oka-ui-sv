@@ -76,12 +76,15 @@ OKA UI comes with several built-in themes:
 - Badge
 - Button
 - Checkbox
+- Dialog
 - Input
 - Loading
 - Pagination
+- PinInput
 - Select (Single & Multi)
 - Separator
 - Sidebar
+- Tooltips
 
 ### Usage Example
 

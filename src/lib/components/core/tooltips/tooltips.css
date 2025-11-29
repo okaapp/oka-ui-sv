@@ -1,0 +1,37 @@
+.tooltip-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: help;
+    outline: none;
+}
+
+.tooltip-content {
+    background-color: var(--content-primary);
+    color: var(--content-inversed);
+    padding: 12px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    max-width: 200px;
+    word-wrap: break-word;
+    /* box-shadow: 0 0 12px rgba(0, 0, 0, 0.12); */
+    animation: tooltip-in 200ms ease-out;
+    z-index: 1000;
+}
+
+@keyframes tooltip-in {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.tooltip-provider {
+    position: relative;
+}

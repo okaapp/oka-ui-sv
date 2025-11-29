@@ -1,0 +1,103 @@
+.pin-input {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.pin-input--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.pin-input__cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    font-weight: 600;
+    border: 2px solid var(--stroke-light);
+    background-color: var(--surface-primary);
+    color: var(--content-primary);
+    border-radius: 12px;
+    transition: all 300ms ease;
+    outline: none;
+    cursor: text;
+    position: relative;
+}
+
+.pin-input .pin-input__cell:hover {
+    border-color: var(--stroke-medium) !important;
+}
+
+.pin-input__cell:hover {
+    border-color: var(--stroke-medium) !important;
+}
+
+.pin-input__cell[data-active] {
+    border-color: var(--accent-primary);
+    background-color: var(--surface-secondary);
+    box-shadow: 0 0 0 3px rgba(var(--accent-primary-rgb), 0.1);
+}
+
+.pin-input__cell[data-inactive] {
+    border-color: var(--stroke-light);
+}
+
+/* Caret animation for the active cell */
+.pin-input__caret {
+    position: absolute;
+    width: 2px;
+    height: 24px;
+    background-color: var(--accent-primary);
+    animation: caret-blink 1s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes caret-blink {
+
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Root container adjustments */
+.pin-input-root {
+    display: flex;
+    gap: 8px;
+    position: relative;
+}
+
+.pin-input-root[disabled] .pin-input__cell {
+    background-color: var(--surface-tertiary);
+    border-color: var(--stroke-muted);
+    color: var(--content-tertiary);
+    cursor: not-allowed;
+}
+
+.pin-input-root[disabled] .pin-input__cell:hover {
+    border-color: var(--stroke-muted);
+}
+
+/* Text character styling */
+.pin-input__char {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-variant: tabular-nums;
+}
+
+/* Focus visible state */
+.pin-input__cell:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}

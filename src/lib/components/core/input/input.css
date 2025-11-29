@@ -24,7 +24,6 @@
 }
 
 .input:hover {
-    background-color: var(--surface-secondary);
     border-color: var(--stroke-medium);
 }
 

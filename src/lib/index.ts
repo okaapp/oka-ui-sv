@@ -7,10 +7,12 @@ export { default as Dialog } from './components/core/dialog/Dialog.svelte';
 export { default as Input } from './components/core/input/Input.svelte';
 export { default as Loading } from './components/core/loading/Loading.svelte';
 export { default as Pagination } from './components/core/pagination/Pagination.svelte';
+export { default as PinInput } from './components/core/pin-input/PinInput.svelte';
 export { default as SingleSelect } from './components/core/select/SingleSelect.svelte';
 export { default as MultiSelect } from './components/core/select/MultiSelect.svelte';
 export { default as Separator } from './components/core/separator/Separator.svelte';
 export { default as Sidebar } from './components/core/sidebar/Sidebar.svelte';
+export { default as Tooltips } from './components/core/tooltips/Tooltips.svelte';
 
 // Styling & theming
 export { default as OKAStyleProvider } from './components/styling/oka-style-provider/OKAStyleProvider.svelte';

@@ -12,6 +12,7 @@
         description?: Snippet;
         contentProps?: WithoutChild<Dialog.ContentProps>;
         actionButtons?: Snippet;
+        size?: "sm" | "md" | "lg";
     };
 
     let {
@@ -23,8 +24,15 @@
         subtitle,
         description,
         actionButtons,
+        size = "md",
         ...restProps
     }: Props = $props();
+
+    const sizeClass = {
+        sm: "dialog-content--sm",
+        md: "dialog-content--md",
+        lg: "dialog-content--lg",
+    };
 </script>
 
 <Dialog.Root bind:open {...restProps}>
@@ -33,7 +41,10 @@
     </Dialog.Trigger>
     <Dialog.Portal>
         <Dialog.Overlay class="dialog-overlay" />
-        <Dialog.Content {...contentProps} class="dialog-content">
+        <Dialog.Content
+            {...contentProps}
+            class={`dialog-content ${sizeClass[size]}`}
+        >
             <div class="dialog-topbar">
                 <div class="dialog-topbar-content">
                     <Dialog.Title class="dialog-title">

@@ -18,6 +18,10 @@ export { default as Tooltips } from './components/core/tooltips/Tooltips.svelte'
 export { default as OKAStyleProvider } from './components/styling/oka-style-provider/OKAStyleProvider.svelte';
 export { default as ThemeSwitcher } from './components/styling/theme-switcher/ThemeSwitcher.svelte';
 
+// AA Engine components
+export { default as AutoButton } from './components/aaengine-set/auto-buton/AutoButton.svelte';
+export { default as EngineOrb } from './components/aaengine-set/engine-orb/EngineOrb.svelte';
+
 // Misc
 export { default as SVG31 } from './components/illustrations/SVG31.svelte';
 

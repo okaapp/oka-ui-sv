@@ -19,6 +19,8 @@
     import Dialog from "$lib/components/core/dialog/Dialog.svelte";
     import PinInput from "$lib/components/core/pin-input/PinInput.svelte";
     import Tooltips from "$lib/components/core/tooltips/Tooltips.svelte";
+    import AutoButton from "$lib/components/aaengine-set/auto-buton/AutoButton.svelte";
+    import SVG31 from "$lib/components/illustrations/SVG31.svelte";
 
     let xmplItems: SelectItem[] = [
         { value: "1", label: "1", subLabel: "Một" },
@@ -52,6 +54,8 @@
     </div>
     <ThemeSwitcher />
     <Separator orientation="horizontal" />
+    <AutoButton label="Tối ưu kho hàng" />
+    <SVG31 />
     <div class="button-group">
         <Button><Smiley class="test-icon" />Húp</Button>
         <Button variant="secondary"><Smiley class="test-icon" />Húp</Button>

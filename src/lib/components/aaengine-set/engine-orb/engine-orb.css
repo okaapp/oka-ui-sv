@@ -1,0 +1,52 @@
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes liquid1 {
+
+        0%,
+        100% {
+            transform: scale(0.8) translateX(0) translateY(0);
+        }
+
+        50% {
+            transform: scale(1.4) translateX(4px) translateY(-2px);
+        }
+    }
+
+    @keyframes liquid2 {
+
+        0%,
+        100% {
+            transform: scale(1.4) translateX(0) translateY(0);
+        }
+
+        50% {
+            transform: scale(0.7) translateX(-2px) translateY(1px);
+        }
+    }
+
+    .liquid-0 {
+        transform-origin: 24px 38.5px;
+        animation: liquid1 8s ease-in-out infinite;
+    }
+
+    .liquid-1 {
+        transform-origin: 24px 13.5px;
+        animation: liquid2 8s ease-in-out infinite;
+    }
+
+    .spinning-container {
+        width: 48px;
+        height: 48px;
+        border-radius: 9999px !important;
+        overflow: clip;
+        animation: spin 8s linear infinite;
+        transform-origin: 24px 24px;
+    }

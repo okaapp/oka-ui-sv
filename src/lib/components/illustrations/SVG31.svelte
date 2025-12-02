@@ -21,7 +21,7 @@
                     ><g style="fill:#000" class="frame-children"
                         ><path
                             d="M81.902 130.6c28.001 0 50.702-22.7 50.702-50.8S109.904 29 81.902 29c-28 0-50.7 22.7-50.7 50.8s22.7 50.8 50.7 50.8"
-                            style="fill: var(--surface-tertiary, #f3f3f4);fill-opacity:1"
+                            style="fill: var(--stroke-muted, #f3f3f4);fill-opacity:1"
                             class="fills"
                         /><path
                             d="M111.346 36.635c1.508 0 2.784 1.155 2.784 2.77v81.727c0 1.501-1.16 2.771-2.784 2.771H50.908c-1.508 0-2.784-1.155-2.784-2.77V39.405c0-1.5 1.16-2.77 2.784-2.77z"
@@ -37,7 +37,7 @@
                             class="fills"
                         /><path
                             d="M111.114 42.984a.913.913 0 0 0-.928-.923H52.185c-.465 0-.93.346-.93.923.697 29.897.93 63.719-2.32 72.492l55.567-.808c3.364-15.237 5.916-42.595 6.612-71.684"
-                            style="fill: var(--surface-tertiary, #f3f3f4);fill-opacity:1"
+                            style="fill: var(--stroke-muted, #f3f3f4);fill-opacity:1"
                             class="fills"
                         /><g filter="url(#a)" style="fill:#000"
                             ><defs
@@ -81,7 +81,7 @@
                             /></g
                         ><path
                             d="M109.374 75.883c-1.624 28.165-26.797 34.053-29.812 34.399-1.393.115-4.061.346-8.817.346 12.528-5.772 19.257-16.16 19.14-24.24 6.033.46 16.473 0 19.489-10.505"
-                            style="fill: var(--surface-tertiary, #f3f3f4);fill-opacity:1"
+                            style="fill: var(--stroke-muted, #f3f3f4);fill-opacity:1"
                             class="fills"
                         /><defs
                             ><linearGradient
@@ -103,7 +103,7 @@
                             class="fills"
                         /><path
                             d="M81.07 36.982c.927 0 1.623-.693 1.623-1.616s-.696-1.616-1.624-1.616c-.927 0-1.624.692-1.624 1.616 0 .923.812 1.616 1.624 1.616"
-                            style="fill: var(--surface-tertiary, #f3f3f4);fill-opacity:1"
+                            style="fill: var(--stroke-muted, #f3f3f4);fill-opacity:1"
                             class="fills"
                         /><path
                             d="M94.758 40.445c-.348 1.962-1.973 3.578-4.06 3.578H71.44c-2.088 0-3.712-1.616-4.06-3.578z"

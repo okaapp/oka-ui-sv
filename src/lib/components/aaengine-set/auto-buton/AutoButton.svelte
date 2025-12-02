@@ -21,7 +21,7 @@
 <button
     class={`auto-button ${isLoading && "auto-button__loading"} ${disabled && "auto-button__disabled"}`}
     {onclick}
-    disabled={disabled || onclick}
+    disabled={disabled || isLoading}
     {...restProps}
 >
     <div

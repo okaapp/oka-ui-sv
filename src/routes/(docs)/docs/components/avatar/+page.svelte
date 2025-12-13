@@ -8,7 +8,7 @@
 <h2>Preview</h2>
 
 <div class="component-preview">
-    <Avatar src="/img/test_avatar.JPG" alt="User 1" />
+    <Avatar src="/img/test_avatar.jpg" alt="User 1" />
     <Avatar src="" alt="User 2" iconFallback />
     <Avatar src="" alt="User 2" fallback="WR" />
 </div>
@@ -61,22 +61,22 @@
 <h3>Different Sizes</h3>
 <div class="component-preview">
     <Avatar
-        src="/img/test_avatar.JPG"
+        src="/img/test_avatar.jpg"
         alt="Small"
         style="width: 32px; height: 32px;"
     />
     <Avatar
-        src="/img/test_avatar.JPG"
+        src="/img/test_avatar.jpg"
         alt="Medium"
         style="width: 48px; height: 48px;"
     />
     <Avatar
-        src="/img/test_avatar.JPG"
+        src="/img/test_avatar.jpg"
         alt="Large"
         style="width: 64px; height: 64px;"
     />
     <Avatar
-        src="/img/test_avatar.JPG"
+        src="/img/test_avatar.jpg"
         alt="Extra Large"
         style="width: 96px; height: 96px;"
     />
@@ -96,7 +96,7 @@
 <div class="component-preview">
     <div style="display: flex; margin-left: 16px;">
         <Avatar
-            src="/img/test_avatar.JPG"
+            src="/img/test_avatar.jpg"
             size="xl"
             alt="User 1"
             style="margin-left: -16px; border: 2px solid var(--surface-primary);"

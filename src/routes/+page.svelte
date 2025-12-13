@@ -12,7 +12,7 @@
     <section class="hero">
         <div class="hero__content">
             <div class="hero__badge">
-                <Badge color="indigo" size="lg">v0.4.1</Badge>
+                <Badge color="indigo" size="lg">v0.4.2</Badge>
             </div>
 
             <h1 class="hero__title display-font">

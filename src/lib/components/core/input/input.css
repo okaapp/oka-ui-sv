@@ -34,7 +34,7 @@
 
 .input:disabled {
     cursor: not-allowed;
-    background-color: var(--surface-tertiary);
+    background-color: var(--surface-secondary);
     border-color: var(--stroke-muted);
 }
 

@@ -55,6 +55,7 @@ OKA UI comes with several built-in themes:
 - Light themes:
   - `default-light`
   - `neutral-light`
+  - `nord-light`
 
 - Dark themes:
   - `default-dark`
@@ -70,7 +71,7 @@ OKA UI comes with several built-in themes:
 
 ## Components
 
-### Core Components as of 0.1.0
+### Core Components as of 0.4.2
 
 - Avatar
 - Badge

@@ -49,4 +49,5 @@
         overflow: clip;
         animation: spin 8s linear infinite;
         transform-origin: 24px 24px;
+        filter: blur(1px);
     }

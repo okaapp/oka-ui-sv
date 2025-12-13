@@ -10,12 +10,18 @@
 
 .checkbox[data-state="checked"],
 .checkbox[data-state="indeterminate"] {
-    background-color: var(--content-secondary);
+    background-color: var(--accent-primary-content);
     border-color: transparent;
 }
 
+.checkbox[data-disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 .checkbox__icon {
-    width: 20px;
-    height: 20px;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
     color: var(--content-inversed);
 }

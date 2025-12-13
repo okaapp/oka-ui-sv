@@ -1,120 +1,198 @@
 <script lang="ts">
-    import "./page.css";
     import Button from "$lib/components/core/button/Button.svelte";
-    import SingleSelect from "$lib/components/core/select/SingleSelect.svelte";
-    import Input from "$lib/components/core/input/Input.svelte";
-    import type { SelectItem } from "$lib/components/core/select/Types.js";
-    import MultiSelect from "$lib/components/core/select/MultiSelect.svelte";
-    import Separator from "$lib/components/core/separator/Separator.svelte";
-    import Loading from "$lib/components/core/loading/Loading.svelte";
     import Avatar from "$lib/components/core/avatar/Avatar.svelte";
-    import { Smiley } from "phosphor-svelte";
-    import Badge from "$lib/components/core/badge/Badge.svelte";
     import ThemeSwitcher from "$lib/components/styling/theme-switcher/ThemeSwitcher.svelte";
-    import Pagination from "$lib/components/core/pagination/Pagination.svelte";
-    import Sidebar from "$lib/components/core/sidebar/Sidebar.svelte";
-    import type { SidebarItem } from "$lib/components/core/sidebar/Types.js";
-    import { Package } from "phosphor-svelte";
-    import { Warehouse } from "phosphor-svelte";
-    import Dialog from "$lib/components/core/dialog/Dialog.svelte";
-    import PinInput from "$lib/components/core/pin-input/PinInput.svelte";
-    import Tooltips from "$lib/components/core/tooltips/Tooltips.svelte";
-    import AutoButton from "$lib/components/aaengine-set/auto-buton/AutoButton.svelte";
-    import SVG31 from "$lib/components/illustrations/SVG31.svelte";
-
-    let xmplItems: SelectItem[] = [
-        { value: "1", label: "1", subLabel: "Một" },
-        { value: "2", label: "2", subLabel: "Hai" },
-        { value: "3", label: "3.14", subLabel: "pi" },
-    ];
-    const badgeColorMapExample = {
-        "Thành công": "success",
-        "Thất bại": "error",
-        "Xuất sắc": "purple",
-    };
-    const badgeItemExample: { id: number; label: string }[] = [
-        { id: 1, label: "Thành công" },
-        { id: 2, label: "Thất bại" },
-        { id: 3, label: "Xuất sắc" },
-        { id: 4, label: "Không xác định" },
-    ];
-    const xmplSidebar: SidebarItem[] = [
-        { Label: "Sản phẩm", Icon: Package, Route: "/" },
-        { Label: "Kho hàng", Icon: Warehouse, Route: "/abc" },
-    ];
+    import Badge from "$lib/components/core/badge/Badge.svelte";
+    import EngineOrb from "$lib/components/aaengine-set/engine-orb/EngineOrb.svelte";
+    import CaretRight from "phosphor-svelte/lib/CaretRight";
 </script>
 
-<div class="page-container">
-    <div class="header">
-        <Loading />
-        <div class="header__title">
-            <h1 class="header__title-main">Oka UI</h1>
-            <h3 class="header__title-sub">Components Library</h3>
+<div class="landing">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__content">
+            <div class="hero__badge">
+                <Badge color="indigo" size="lg">v0.4.1</Badge>
+            </div>
+
+            <h1 class="hero__title display-font">
+                Build beautiful apps with OKA UI
+            </h1>
+
+            <p class="hero__description">
+                A comprehensive Svelte UI component library for the Appta
+                software platform by the OKA Tech team.
+            </p>
+
+            <div style="display: flex; margin-left: 16px;">
+                <Avatar
+                    src="https://avatars.githubusercontent.com/u/81915970?v=4"
+                    size="xl"
+                    alt="User 1"
+                    style="margin-left: -16px; border: 2px solid var(--surface-secondary);"
+                />
+                <Avatar
+                    src="https://avatars.githubusercontent.com/u/87857683?v=4"
+                    size="xl"
+                    alt="User 1"
+                    style="margin-left: -16px; border: 2px solid var(--surface-secondary);"
+                />
+                <Avatar
+                    src="https://avatars.githubusercontent.com/u/121375913?v=4"
+                    size="xl"
+                    alt="User 2"
+                    style="margin-left: -16px; border: 2px solid var(--surface-secondary);"
+                />
+            </div>
+
+            <div class="hero__actions">
+                <Button
+                    variant="primary"
+                    size="lg"
+                    onclick={() =>
+                        (window.location.href = "/docs/installation")}
+                >
+                    Get Started
+                    <CaretRight />
+                </Button>
+                <Button
+                    variant="tertiary"
+                    size="lg"
+                    onclick={() => (window.location.href = "/docs")}
+                >
+                    View Docs
+                </Button>
+            </div>
         </div>
-    </div>
-    <ThemeSwitcher />
-    <Separator orientation="horizontal" />
-    <AutoButton label="Tối ưu kho hàng" />
-    <SVG31 />
-    <div class="button-group">
-        <Button><Smiley class="test-icon" />Húp</Button>
-        <Button variant="secondary"><Smiley class="test-icon" />Húp</Button>
-        <Button variant="tertiary"><Smiley class="test-icon" />Húp</Button>
-        <Button disabled><Smiley class="test-icon" />Húp</Button>
-    </div>
-    <div class="button-group">
-        <Button size="md"><Smiley />Húp</Button>
-        <Button size="md" variant="secondary"><Smiley />Húp</Button>
-        <Button size="md" variant="tertiary"><Smiley />Húp</Button>
-        <Button size="md" disabled><Smiley />Húp</Button>
-    </div>
-    <SingleSelect items={xmplItems} class="select-container" />
-    <MultiSelect items={xmplItems} class="select-container" />
-    <Input />
-    <PinInput maxlength={6} />
-    <Tooltips>
-        {#snippet trigger()}
-            <Smiley />
-        {/snippet}
-        Hello my name is Tu
-    </Tooltips>
-    <Dialog>
-        {#snippet trigger()}
-            <div>Open</div>
-        {/snippet}
-        {#snippet title()}
-            Account settings
-        {/snippet}
 
-        {#snippet description()}
-            Manage your account settings and preferences.
-        {/snippet}
+        <div class="hero__visual">
+            <div class="hero__orb">
+                <EngineOrb />
+            </div>
+        </div>
+    </section>
 
-        <!-- Additional dialog content here... -->
-    </Dialog>
-    <Separator orientation="vertical" />
-    <div class="avatar-group">
-        <Avatar src="img/test_avatar.jpg" />
-        <Avatar fallback="AB" />
-        <Avatar iconFallback />
-        <Avatar iconFallback size="lg" />
-    </div>
-    <div class="badge-group">
-        <Badge color="blue">Mì tôm</Badge>
-        <Badge color="pink" variant="outline">Mì tôm</Badge>
-        <Badge color="severe" size="sm">Mì tôm</Badge>
-        <Badge color="success"><Smiley />Mì tôm</Badge>
-        <Badge color="indigo" size="sm" variant="outline">
-            <Smiley />Mì tôm
-        </Badge>
-        {#each badgeItemExample as i}
-            <Badge
-                color={badgeColorMapExample[
-                    i.label as keyof typeof badgeColorMapExample
-                ]}>{i.label}</Badge
-            >
-        {/each}
-    </div>
-    <Pagination count={96} />
-    <Sidebar items={xmplSidebar} class="sidebar-demo" />
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__left">
+                <span class="footer__copy">© 2025 OKA Tech. MIT License.</span>
+            </div>
+            <div class="footer__right"></div>
+        </div>
+    </footer>
 </div>
+
+<style>
+    .landing {
+        min-height: 100vh;
+    }
+
+    /* Hero Section */
+    .hero {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 120px 24px 80px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: center;
+        min-height: 80vh;
+        height: 100%;
+    }
+
+    .hero__content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .hero__badge {
+        display: flex;
+    }
+
+    .hero__title {
+        font-size: 64px;
+        line-height: 1.1;
+        margin: 0;
+        color: var(--content-primary);
+        font-family: "DM Serif Display";
+        margin: 0;
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    .hero__description {
+        font-size: 20px;
+        line-height: 1.6;
+        color: var(--content-secondary);
+        margin: 0;
+    }
+
+    .hero__actions {
+        display: flex;
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    .hero__visual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 64px;
+    }
+
+    .hero__orb {
+        transform: scale(8);
+    }
+
+    .footer {
+        max-width: 1200px;
+        margin: 64px auto 0 auto;
+        padding: 48px 24px;
+    }
+
+    .footer__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer__left {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer__copy {
+        font-size: 14px;
+        color: var(--content-tertiary);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .hero {
+            grid-template-columns: 1fr;
+            padding: 80px 24px 60px;
+            gap: 48px;
+        }
+
+        .hero__title {
+            font-size: 48px;
+        }
+
+        .hero__visual {
+            padding: 48px;
+        }
+
+        .hero__orb {
+            transform: scale(3);
+        }
+
+        .footer__content {
+            flex-direction: column;
+            gap: 24px;
+            text-align: center;
+        }
+    }
+</style>

@@ -1,0 +1,123 @@
+* {
+    /* For Firefox */
+    scrollbar-width: none;
+    scrollbar-color: transparent;
+    scrollbar-arrow-color: transparent;
+    scrollbar-highlight-color: transparent;
+    scrollbar-base-color: transparent;
+    scrollbar-gutter: 24px;
+    scrollbar-base-color: var(--stroke-light);
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 8px;
+    /* Slightly thinner for a more modern look */
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--stroke-light);
+    border-radius: 999px;
+    transition: all 0.3s ease;
+    opacity: 0.3;
+}
+
+/* Remove scrollbar buttons (arrows) */
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Remove corner where horizontal and vertical scrollbars meet */
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* Hover states with smooth transitions */
+::-webkit-scrollbar-thumb:hover {
+    opacity: 0.8;
+    background-color: color-mix(in srgb, var(--stroke-medium) 85%, white);
+    /* Slightly lighter on hover */
+}
+
+::-webkit-scrollbar-thumb:active {
+    opacity: 1;
+    background-color: color-mix(in srgb, var(--stroke-medium) 90%, black);
+    /* Slightly darker when clicked */
+}
+
+/* Make scrollbar more visible when hovering the container */
+*:hover::-webkit-scrollbar-thumb {
+    opacity: 0.5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --appbg-from: #eff9fe;
+    --appbg-to: #c7eeff;
+}
+
+body.default-dark {
+    --appbg-from: var(--surface-secondary);
+    --appbg-to: var(--surface-secondary);
+}
+
+body.neutral-light {
+    --appbg-from: var(--surface-secondary);
+    --appbg-to: var(--surface-secondary);
+}
+
+body.neutral-dark {
+    --appbg-from: var(--surface-secondary);
+    --appbg-to: var(--surface-secondary);
+}
+
+body.nord-light {
+    --appbg-from: var(--surface-tertiary);
+    --appbg-to: var(--surface-secondary);
+}
+
+body.nord-dark {
+    --appbg-from: var(--surface-tertiary);
+    --appbg-to: var(--surface-secondary);
+}
+
+body.fengshui-kim {
+    --appbg-from: var(--surface-tertiary);
+    --appbg-to: var(--surface-secondary);
+}
+
+body.fengshui-moc {
+    --appbg-from: var(--surface-tertiary);
+    --appbg-to: var(--surface-secondary);
+}
+
+body.fengshui-thuy {
+    --appbg-from: var(--surface-tertiary);
+    --appbg-to: var(--surface-secondary);
+}
+
+body.fengshui-hoa {
+    --appbg-from: var(--surface-tertiary);
+    --appbg-to: var(--surface-secondary);
+}
+
+body.fengshui-tho {
+    --appbg-from: var(--surface-tertiary);
+    --appbg-to: var(--surface-secondary);
+}
+
+.bg-override {
+    background: linear-gradient(var(--appbg-from), var(--appbg-to));
+}
+
+body {
+    margin: 0;
+}

@@ -1,5 +1,5 @@
 .button {
-    width: fit-content;
+    width: max-content;
     cursor: pointer;
     border-radius: 12px;
     display: inline-flex;

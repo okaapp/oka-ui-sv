@@ -44,8 +44,8 @@
 
 .select-trigger:disabled {
     cursor: not-allowed;
-    background-color: var(--surface-tertiary);
-    border-color: var(--stroke-muted);
+    background-color: var(--stroke-muted);
+    border-color: var(--stroke-light);
 }
 
 .select-trigger:invalid {

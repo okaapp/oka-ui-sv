@@ -11,7 +11,6 @@
         value = $bindable(),
         items = [] as SelectItem[],
         placeholder = "Chọn ở đây",
-        class: className,
         ...props
     } = $props();
 

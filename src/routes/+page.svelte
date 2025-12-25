@@ -1,7 +1,6 @@
 <script lang="ts">
     import Button from "$lib/components/core/button/Button.svelte";
     import Avatar from "$lib/components/core/avatar/Avatar.svelte";
-    import ThemeSwitcher from "$lib/components/styling/theme-switcher/ThemeSwitcher.svelte";
     import Badge from "$lib/components/core/badge/Badge.svelte";
     import EngineOrb from "$lib/components/aaengine-set/engine-orb/EngineOrb.svelte";
     import CaretRight from "phosphor-svelte/lib/CaretRight";
@@ -12,7 +11,7 @@
     <section class="hero">
         <div class="hero__content">
             <div class="hero__badge">
-                <Badge color="indigo" size="lg">v0.4.2</Badge>
+                <Badge color="indigo" size="lg">v0.4.3</Badge>
             </div>
 
             <h1 class="hero__title display-font">
@@ -49,8 +48,7 @@
                 <Button
                     variant="primary"
                     size="lg"
-                    onclick={() =>
-                        (window.location.href = "/docs/installation")}
+                    onclick={() => (window.location.href = "/docs")}
                 >
                     Get Started
                     <CaretRight />
@@ -58,9 +56,9 @@
                 <Button
                     variant="tertiary"
                     size="lg"
-                    onclick={() => (window.location.href = "/docs")}
+                    onclick={() => (window.location.href = "/demo-pages")}
                 >
-                    View Docs
+                    Demo Pages
                 </Button>
             </div>
         </div>

@@ -13,7 +13,8 @@
     border-radius: 12px;
     font-size: 14px;
     font-weight: 500;
-    max-width: 200px;
+    max-width: 320px;
+    width: max-content;
     word-wrap: break-word;
     /* box-shadow: 0 0 12px rgba(0, 0, 0, 0.12); */
     animation: tooltip-in 200ms ease-out;

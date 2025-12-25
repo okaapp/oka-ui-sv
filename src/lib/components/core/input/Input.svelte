@@ -18,7 +18,6 @@
         ref = $bindable(null),
         value = $bindable(),
         invalid = $bindable(false),
-        class: className,
         ...restProps
     }: Props & {
         invalid?: boolean;

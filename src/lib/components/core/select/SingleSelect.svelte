@@ -11,6 +11,7 @@
         value = $bindable(),
         items = [] as SelectItem[],
         placeholder = "Chọn ở đây",
+        onvaluechange = undefined as ((value: string) => void) | undefined,
         ...props
     } = $props();
 
@@ -21,7 +22,12 @@
 
 <Select.Root
     type="single"
-    onValueChange={(v) => (value = v)}
+    onValueChange={(v) => {
+        if (v) {
+            value = v;
+            onvaluechange?.(v);
+        }
+    }}
     {items}
     {...props}
 >

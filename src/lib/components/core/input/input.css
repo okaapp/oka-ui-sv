@@ -34,8 +34,8 @@
 
 .input:disabled {
     cursor: not-allowed;
-    background-color: var(--surface-secondary);
-    border-color: var(--stroke-muted);
+    background-color: var(--stroke-muted);
+    border-color: var(--stroke-light);
 }
 
 .input:invalid {

@@ -441,7 +441,7 @@ body.fengshui-kim {
     --accent-primary-surface: #FFF1D7;
     --accent-secondary: #FFD863;
     --accent-secondary-content: #463500;
-    --accent-secondary-surface: #FFF0C2;
+    --accent-secondary-surface: #FFE699;
 
     --action-primary: #C88704;
     --action-primary-hover: #FAB01B;
@@ -464,7 +464,7 @@ body.fengshui-kim {
     --stroke-xtrabold: #FAAC0F;
 
     --surface-primary: #FFF;
-    --surface-secondary: #FFF8EB;
+    --surface-secondary: #FFFAF0;
     --surface-tertiary: #FFF1D7;
 }
 
@@ -474,7 +474,7 @@ body.fengshui-moc {
     --accent-primary-surface: #E0F9DC;
     --accent-secondary: #99E62E;
     --accent-secondary-content: #172504;
-    --accent-secondary-surface: #EDFBDA;
+    --accent-secondary-surface: #CAF291;
 
     --action-primary: #37BA20;
     --action-primary-hover: #48DC2E;
@@ -497,7 +497,7 @@ body.fengshui-moc {
     --stroke-xtrabold: #48DC2E;
 
     --surface-primary: #FFF;
-    --surface-secondary: #F0FCEE;
+    --surface-secondary: #F2FFF0;
     --surface-tertiary: #E0F9DC;
 }
 
@@ -507,7 +507,7 @@ body.fengshui-thuy {
     --accent-primary-surface: #D9EFFC;
     --accent-secondary: #37E8E8;
     --accent-secondary-content: #063737;
-    --accent-secondary-surface: #DAFBFB;
+    --accent-secondary-surface: #A4F4F4;
 
     --action-primary: #118BD1;
     --action-primary-hover: #1DA0ED;
@@ -530,7 +530,7 @@ body.fengshui-thuy {
     --stroke-xtrabold: #2FA8EE;
 
     --surface-primary: #FFF;
-    --surface-secondary: #ECF7FD;
+    --surface-secondary: #F0FAFF;
     --surface-tertiary: #D9EFFC;
 }
 
@@ -540,7 +540,7 @@ body.fengshui-hoa {
     --accent-primary-surface: #F9DEDC;
     --accent-secondary: #FF6333;
     --accent-secondary-content: #3D0E00;
-    --accent-secondary-surface: #FFE0D6;
+    --accent-secondary-surface: #FFB199;
 
     --action-primary: #DE3A2B;
     --action-primary-hover: #E04638;
@@ -563,7 +563,7 @@ body.fengshui-hoa {
     --stroke-xtrabold: #DE3A2B;
 
     --surface-primary: #FFF;
-    --surface-secondary: #FCEFED;
+    --surface-secondary: #FFF2F2;
     --surface-tertiary: #F9DEDC;
 }
 
@@ -573,7 +573,7 @@ body.fengshui-tho {
     --accent-primary-surface: #F2E8E4;
     --accent-secondary: #A65E2E;
     --accent-secondary-content: #301B0D;
-    --accent-secondary-surface: #F6E8DF;
+    --accent-secondary-surface: #E5BB9F;
 
     --action-primary: #734B39;
     --action-primary-hover: #96624A;

@@ -42,6 +42,11 @@
     font-weight: normal;
 }
 
+.select-trigger.has-value {
+    color: var(--content-primary);
+    font-weight: 500;
+}
+
 .select-trigger:disabled {
     cursor: not-allowed;
     background-color: var(--stroke-muted);

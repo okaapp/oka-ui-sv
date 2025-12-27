@@ -18,6 +18,7 @@
     const selectedLabel = $derived(
         value ? items.find((item) => item.value === value)?.label : placeholder,
     );
+    const hasValue = $derived(!!value);
 </script>
 
 <Select.Root
@@ -32,7 +33,7 @@
     {...props}
 >
     <Select.Trigger
-        class={`select-trigger focus-override`}
+        class={`select-trigger focus-override ${hasValue ? "has-value" : ""}`}
         aria-label="Chọn ở đây"
     >
         <span class="select-trigger-text">{selectedLabel}</span>

@@ -108,7 +108,6 @@
     let selectedProduct: Product | null = $state(null);
 
     const SORTOPTIONS: SelectItem[] = [
-        { label: "Không sắp xếp", value: "" },
         { label: "Tên (A-Z)", value: "name-asc" },
         { label: "Tên (Z-A)", value: "name-desc" },
         { label: "Giá (Thấp đến Cao)", value: "price-asc" },

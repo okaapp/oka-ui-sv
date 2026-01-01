@@ -1,8 +1,7 @@
 .select-trigger {
     display: inline-flex;
     gap: 4px;
-    min-width: 160px;
-    /* min-w-40 */
+    min-width: 144px;
     width: 100%;
     height: 48px;
     /* h-12 */

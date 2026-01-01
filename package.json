@@ -1,6 +1,6 @@
 {
 	"name": "@okaapp/oka-ui-sv",
-	"version": "0.4.5",
+	"version": "0.4.6",
 	"description": "OKA UI Svelte components library for the Appta software platform",
 	"license": "MIT",
 	"scripts": {

@@ -1,6 +1,7 @@
 <script lang="ts">
     import "./button.css";
     import { Button } from "bits-ui";
+    import { IconContext } from "phosphor-svelte";
 
     let {
         ref = $bindable(null),
@@ -18,9 +19,15 @@
     };
 
     const sizes = {
-        lg: "height: 48px; padding: 12px; font-size: 16px;",
-        md: "height: 40px; padding: 8px; font-size: 14px;",
-        sm: "height: 36px; padding: 6px 8px; font-size: 12px;",
+        lg: "height: 48px; padding: 12px 16px; font-size: 16px; gap: 8px;",
+        md: "height: 40px; padding: 12px 8px; font-size: 14px; gap: 8px;",
+        sm: "height: 36px; padding: 6px 8px; font-size: 12px; gap: 4px;",
+    };
+
+    const iconSizes = {
+        lg: 24,
+        md: 20,
+        sm: 16,
     };
 </script>
 
@@ -30,5 +37,13 @@
     {...props}
     bind:ref
 >
-    {@render children?.()}
+    <IconContext
+        values={{
+            size: sizes[size as keyof typeof iconSizes],
+            mirrored: false,
+            weight: "regular",
+        }}
+    >
+        {@render children?.()}
+    </IconContext>
 </Button.Root>

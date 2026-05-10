@@ -15,6 +15,12 @@
         currentTheme = savedTheme;
     });
 
+    type Props = {
+        lang?: "vi" | "en";
+    };
+
+    let { lang = "vi" }: Props = $props();
+
     function setTheme(v: string) {
         document.body.classList.remove(currentTheme);
         document.body.classList.add(v);
@@ -24,9 +30,11 @@
 </script>
 
 <Select.Root type="single" onValueChange={setTheme} value={currentTheme}>
-    <Select.Trigger class="theme-switcher" aria-label="Giao diện">
+    <Select.Trigger class="theme-switcher">
         <Palette class="theme-switcher__icon" />
-        <span class="theme-switcher__label">Giao diện</span>
+        <span class="theme-switcher__label"
+            >{lang === "vi" ? "Giao diện" : "Themes"}</span
+        >
     </Select.Trigger>
     <Select.Portal>
         <Select.Content class="theme-content" sideOffset={12}>
@@ -47,8 +55,12 @@
                             {#each themeGroup.Themes as theme}
                                 <Select.Item
                                     value={theme.ClassName}
-                                    label={theme.DisplayName}
-                                    aria-label={theme.DisplayName}
+                                    label={lang === "vi"
+                                        ? theme.DisplayName
+                                        : theme.DisplayNameEng}
+                                    aria-label={lang === "vi"
+                                        ? theme.DisplayName
+                                        : theme.DisplayNameEng}
                                     class="theme-item"
                                 >
                                     {#if theme.DisplayImage}
@@ -65,7 +77,9 @@
                                     {:else}
                                         <Palette class="theme-item__image" />
                                     {/if}
-                                    {theme.DisplayName}
+                                    {lang === "vi"
+                                        ? theme.DisplayName
+                                        : theme.DisplayNameEng}
                                 </Select.Item>
                             {/each}
                         </div>
